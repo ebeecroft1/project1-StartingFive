@@ -1,3 +1,10 @@
 <h1>Starting 5</h1>
 
-<h2>Functionality coming soon</h2>
+<% if @current_user.present? %>
+    <h2>Welcome <%= @current_user.email %>!</h2>
+
+    <h3>Your teams:</h3>
+    <ul>
+        <li>List team here</li>
+    </ul>
+<% end %>

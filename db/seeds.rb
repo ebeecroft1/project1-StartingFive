@@ -15,3 +15,16 @@ p8 = Player.create :name => "Ja Morant", :position => 'PG', :age => '22', :heigh
 p9 = Player.create :name => "DeMar DeRozan", :position => 'SF', :age => '32', :height => "6'6", :weight => '220', :points => '27.9', :rebounds => '5.2', :assists => '4.9', :blocks => '0.3', :steals => '0.9', :college => 'USC', :image => 'https://cdn.nba.com/manage/2022/03/demar-derozan-smiles.jpg'
 p10 = Player.create :name => "Chris Paul", :position => 'PG', :age => '36', :height => "6'0", :weight => '175', :points => '14.7', :rebounds => '4.4', :assists => '10.8', :blocks => '0.3', :steals => '1.9', :college => 'Wake Forest', :image => 'https://thespun.com/wp-content/uploads/2021/07/GettyImages-1328249073.jpg'
 puts "#{ Player.count } players"
+
+Team.destroy_all
+t1 = Team.create :name => 'LeBron Guards'
+t2 = Team.create :name => 'All bigs'
+
+# Association
+
+puts "Teams and users"
+u1.teams << t1 << t2
+
+puts "Players and teams"
+t1.players << p1 << p6 << p7 << p8 << p10
+t2.players << p2 << p3 << p4 << p5 << p7
