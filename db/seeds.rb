@@ -25,6 +25,6 @@ t2 = Team.create :name => 'All bigs'
 puts "Teams and users"
 u1.teams << t1 << t2
 
-puts "Players and teams"
+puts "Teams and players"
 t1.players << p1 << p6 << p7 << p8 << p10
 t2.players << p2 << p3 << p4 << p5 << p7

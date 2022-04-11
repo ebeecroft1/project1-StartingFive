@@ -1,5 +1,9 @@
 class TeamsController < ApplicationController
     before_action :check_for_login
+    
+    def index
+        @teams = Team.all
+    end
 
     def new
         @team = Team.new
