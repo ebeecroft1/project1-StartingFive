@@ -1,0 +1,31 @@
+<h1><%= @player.name %></h1>
+
+<%= image_tag @player.image, :class => 'feature' if @player.image.present? %>
+
+<h3>Bio</h3>
+<ul>
+    <li>Name: <%= @player.name %></li>
+    <li>Position: <%= @player.position %></li>
+    <li>Age: <%= @player.age %></li>
+    <li>Height: <%= @player.height %>"</li>
+    <li>Weight: <%= @player.weight %> lbs</li>
+</ul>
+
+<h3>2021-2022 Season Averages</h3>
+
+<ul>
+    <li>Points: <%= @player.points %></li>
+    <li>Rebounds: <%= @player.rebounds %></li>
+    <li>Assists: <%= @player.assists %></li>
+    <li>Blocks: <%= @player.blocks %></li>
+    <li>Steals: <%= @player.steals %></li>
+    <li>College: <%= @player.college %></li>
+</ul>
+
+<div class="controls">
+    <% if @current_user.admin? %>
+        <%= link_to "Edit Player", edit_player_path(@player.id) %>
+        |
+        
+    <% end %>
+</div>

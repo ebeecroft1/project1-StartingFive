@@ -11,17 +11,24 @@ class TeamsController < ApplicationController
 
     def new
         @team = Team.new
+        @players = Player.all
     end
 
     def create
-        team = Team.create team_params
+        team = Team.create team_params 
         @current_user.teams << team
-        redirect_to root_path # CHANGE TO REDIRECT TO TEAM
+        redirect_to teams_path
+    end
+
+    def destroy
+        team = Team.find params[:id]
+        team.destroy
+        redirect_to teams_path
     end
 
     private
     def team_params
-        params.require(:team).permit(:name)
+        params.require(:team).permit(:name, :player_ids => [])
     end
 
 end
