@@ -1,4 +1,20 @@
-<h1>Starting 5</h1>
-
-<h2>Welcome!</h2>
-<%= link_to 'Sign in', login_path %>
+<div class="row">
+    <div class="p-5 col-md-7">
+    
+        <h2>Pick your Starting 5!</h2>
+        
+        <div class="card" style="width: 18rem;">
+            <img src="/assets/Team.jpeg" class="card-img-top" alt="Blank Basketball Team">
+            <div class="d-grid gap-2 card-body">
+                <% if @current_user.present? %>
+                    <a href="/teams/new" class="btn btn-outline-success btn-lg">Go!</a>
+                <% else %>
+                    <a href="/users/new" class="btn btn-outline-success btn-lg">Go!</a>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <img src="/assets/StephCurryHome.jpeg" class="img-fluid" alt="Steph Curry Cooking">
+    </div>
+</div>
