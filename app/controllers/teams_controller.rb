@@ -5,10 +5,6 @@ class TeamsController < ApplicationController
         @teams = Team.all
     end
 
-    def show
-        @team = Team.find params[:id]
-    end
-
     def new
         @team = Team.new
         @players = Player.all
@@ -18,6 +14,20 @@ class TeamsController < ApplicationController
         team = Team.create team_params 
         @current_user.teams << team
         redirect_to teams_path
+    end
+
+    def edit
+        @team = Team.find params[:id]
+    end
+    
+    def update
+        team = Team.find params[:id]
+        team.update team_params
+        redirect_to team
+    end
+
+    def show
+        @team = Team.find params[:id]
     end
 
     def destroy

@@ -1,0 +1,9 @@
+<%= form_for @team do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :player_id %>s
+    <%= f.collection_select(:player_ids, Player.all, :id, :name, {prompt: true}, {:multiple => true}) %>
+
+    <%= f.submit %>
+<% end %>

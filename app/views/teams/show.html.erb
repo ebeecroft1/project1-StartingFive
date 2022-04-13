@@ -8,3 +8,8 @@
     </p>
 <% end %>
 
+<div class="controls">
+    <%= link_to "Edit Starting 5", edit_team_path(@team.id) %>
+    |
+    <%= link_to "Delete Starting 5", @team, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+</div>
