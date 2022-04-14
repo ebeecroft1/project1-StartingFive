@@ -32,6 +32,7 @@
             </li>
           </ul>
         </div>
+
         <% if @current_user.present? %>
           <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete', class: 'btn btn-outline-danger' %>
         <% else %>
