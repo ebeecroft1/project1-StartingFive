@@ -7,9 +7,9 @@
             <img src="/assets/Team.jpeg" class="card-img-top" alt="Blank Basketball Team">
             <div class="d-grid gap-2 card-body">
                 <% if @current_user.present? %>
-                    <a href="/teams/new" class="btn btn-outline-success btn-lg">Go!</a>
+                    <a href="/teams/new" class="btn btn-outline-danger btn-lg">Go!</a>
                 <% else %>
-                    <a href="/users/new" class="btn btn-outline-success btn-lg">Go!</a>
+                    <a href="/users/new" class="btn btn-outline-danger btn-lg">Go!</a>
                 <% end %>
             </div>
         </div>

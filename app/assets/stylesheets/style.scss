@@ -1,0 +1,25 @@
+.container {
+    padding-top: 2em;
+}
+
+.navbar {
+    background-color: #19204e;
+    font-family: 'Rubik', sans-serif;
+    font-size: large;
+}
+
+.login {
+    color: red;
+    &:hover {
+        color:white;
+    }
+}
+
+.logo {
+    font-family: 'Bungee Shade', cursive;
+    font-size: xx-large;
+}
+
+.btn-warning {
+    color: whitesmoke;
+}
