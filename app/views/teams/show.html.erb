@@ -2,14 +2,30 @@
 
 <h3>Lineup:</h3>
 
-<% @team.players.each do |player| %>
-    <p>
-        <%= link_to player.name, player_path(player.id) %>
-    </p>
-<% end %>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <% @team.players.each do |player| %>
+        <div class="col">
+            <div class="card h-100">
+                <img src="<%= player.image %>" class="card-img-top" alt="<%= player.name %>">
+                <div class="card-body">
+                    <h5 class="card-title"><%= player.name %></h5>
+                    <ul class="card-text">
+                        <li>Position: <%= player.position %></li>
+                        <li>Height: <%= player.height %></li>
+                        <li>Points (avg): <%= player.points %></li>
+                    </ul>
+                    
+                    <a href="<%= player_path(player.id) %>" class="btn btn-outline-danger
+                ">Profile</a>
+                </div>
+            </div>
+        </div>
+    <% end %>
+    <div class="col">
+        <div class="d-flex justify-content-between">
+            <%= link_to "Edit Starting 5", edit_team_path(@team.id), class: 'btn btn-outline-success' %>
+            <%= link_to "Delete Starting 5", @team, :method => 'delete', class: 'btn btn-outline-danger' %>
+        </div>
+    </div>
 
-<div class="controls">
-    <%= link_to "Edit Starting 5", edit_team_path(@team.id) %>
-    |
-    <%= link_to "Delete Starting 5", @team, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
 </div>

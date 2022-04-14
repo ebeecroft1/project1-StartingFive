@@ -1,7 +1,6 @@
 <% if @current_user.present? %>
     <h2>Welcome <%= @current_user.email %>!</h2>
 
-    <h3>Your teams:</h3>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <% @current_user.teams.each do |team| %>
             <div class="col">
