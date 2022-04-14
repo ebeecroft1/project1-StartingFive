@@ -1,26 +1,37 @@
 <h1><%= @player.name %></h1>
 
-<%= image_tag @player.image, :class => 'feature' if @player.image.present? %>
+<div class="card-group">
+    <div class="card border-dark mb-3" style="max-width: 20rem;">
+        <%= image_tag @player.image, :class => 'feature rounded' if @player.image.present? %>
+    </div>
 
-<h3>Bio</h3>
-<ul>
-    <li>Name: <%= @player.name %></li>
-    <li>Position: <%= @player.position %></li>
-    <li>Age: <%= @player.age %></li>
-    <li>Height: <%= @player.height %></li>
-    <li>Weight: <%= @player.weight %> lbs</li>
-    <li>College: <%= @player.college %></li>
-</ul>
+    <div class="card border-dark mb-3" style="max-width: 20rem;">
+        <div class="card-header">Bio</div>
+        <div class="card-body text-dark">
+            <ul>
+                <li>Name: <%= @player.name %></li>
+                <li>Position: <%= @player.position %></li>
+                <li>Age: <%= @player.age %></li>
+                <li>Height: <%= @player.height %></li>
+                <li>Weight: <%= @player.weight %> lbs</li>
+                <li>College: <%= @player.college %></li>
+            </ul>
+        </div>
+    </div>
 
-<h3>2021-2022 Season Averages</h3>
-
-<ul>
-    <li>Points: <%= @player.points %></li>
-    <li>Rebounds: <%= @player.rebounds %></li>
-    <li>Assists: <%= @player.assists %></li>
-    <li>Blocks: <%= @player.blocks %></li>
-    <li>Steals: <%= @player.steals %></li>
-</ul>
+    <div class="card border-dark mb-3" style="max-width: 20rem;">
+        <div class="card-header">2021-2022 Season Averages</div>
+        <div class="card-body text-dark">
+            <ul>
+                <li>Points: <%= @player.points %></li>
+                <li>Rebounds: <%= @player.rebounds %></li>
+                <li>Assists: <%= @player.assists %></li>
+                <li>Blocks: <%= @player.blocks %></li>
+                <li>Steals: <%= @player.steals %></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <div class="controls">
     <% if @current_user.admin? %>

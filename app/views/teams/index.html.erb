@@ -2,24 +2,27 @@
     <h2>Welcome <%= @current_user.email %>!</h2>
 
     <h3>Your teams:</h3>
-    <% @current_user.teams.each do |team| %>
-    <p>
-        <%= link_to team.name, team_path(team.id) %>
-    </p>
-    <% end %>
-
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-        </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <% @current_user.teams.each do |team| %>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= team.name %></h5>
+                        <ul class="card-text">
+                            <% team.players.each do |player| %>
+                            <li><%= player.name %></li>
+                            <% end%>
+                        </ul>
+                        
+                        <a href="<%= team_path(team.id) %>" class="btn btn-outline-danger">View</a>
+                    </div>
+                </div>
+            </div>
+        <% end %>
     </div>
+
+    <div class="d-grid gap-2 col-6 mt-4 mx-auto">
+        <button class="btn btn-danger" type="button">Create New Team</button>
     </div>
 
 <% end %>

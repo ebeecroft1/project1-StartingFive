@@ -4,20 +4,21 @@
     <h3><%= link_to 'Create New Player', new_player_path %></h3>
 <% end %>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="row row-cols-1 row-cols-md-4 g-4">
     <% @players.each do |player| %>
         <div class="col">
-            <div class="card h-100" style="width: 18rem;">
+            <div class="card h-100">
                 <img src="<%= player.image %>" class="card-img-top" alt="<%= player.name %>">
                 <div class="card-body">
                     <h5 class="card-title"><%= player.name %></h5>
                     <ul class="card-text">
-                        <li>Name: <%= player.name %></li>
                         <li>Position: <%= player.position %></li>
+                        <li>Height: <%= player.height %></li>
                         <li>Points (avg): <%= player.points %></li>
                     </ul>
                     
-                    <a href="<%= player_path(player.id) %>" class="btn btn-warning">Profile</a>
+                    <a href="<%= player_path(player.id) %>" class="btn btn-outline-danger
+                ">Profile</a>
                 </div>
             </div>
         </div>
