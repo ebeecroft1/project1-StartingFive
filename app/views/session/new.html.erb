@@ -1,11 +1,25 @@
 <h1>Log In</h1>
 
-<%= form_tag login_path do %>
-    <%= label_tag :email %>
-    <%= email_field_tag :email %>
-
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-
-    <%= submit_tag "Sign In" %>
-<% end %>
+<div class='row'>
+    <div class="col-3">
+    </div>
+    <div class="col-6">
+        <%= form_tag login_path do %>
+            <div class="form-floating">
+                <%= email_field_tag :email, nil, :class => 'form-control', :id => 'floatingInput', :placeholder => 'name@example.com' %>
+                <%= label_tag :email, nil, :for => 'floatingInput' %>
+            </div>
+            <br>
+            <div class="form-floating">
+                <%= password_field_tag :password, nil, :class => 'form-control', :id => 'floatingInput', :placeholder => 'name@example.com' %>
+                <%= label_tag :password, nil, :for => 'floatingInput'  %>
+            </div>
+            <br>
+            <%= submit_tag "Sign In", :class => "w-100 btn btn-lg btn-danger" %>
+            <% end %>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+    </div>
+</div>

@@ -8,15 +8,30 @@
     </ol>
 <% end %>
 
-<%= form_for @user do |f| %>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-
-    <%= f.submit "Sign Up!" %>
-<% end %>
+<div class='row'>
+    <div class="col-3">
+    </div>
+    <div class="col-6">
+    <%= form_for @user do |f| %>
+        <div class="form-floating">
+            <%= f.email_field :email, :class => 'form-control', :id => 'floatingInput', :placeholder => 'name@example.com' %>
+            <%= f.label :email, :for => 'floatingInput' %>
+            
+        </div>
+        <br>
+        <div class="form-floating">
+            <%= f.password_field :password, :class => 'form-control', :id => 'floatingInput', :placeholder => 'password' %>
+            <%= f.label :password, :for => 'floatingInput' %>
+        </div>
+        <br>
+        <div class="form-floating">
+            <%= f.password_field :password_confirmation, :class => 'form-control', :id => 'floatingInput', :placeholder => 'password' %>
+            <%= f.label :password_confirmation, :for => 'floatingInput' %>
+        </div>
+        <br>
+        <%= f.submit "Sign Up!", :class => 'w-100 btn btn-lg btn-danger' %>
+    <% end %>
+    </div>
+    <div class="col-3">
+    </div>
+</div>
