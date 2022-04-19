@@ -34,7 +34,7 @@
 </div>
 
 <div class="controls">
-    <% if @current_user.admin? %>
+    <% if @current_user.admin? %> <!-- Restrict player edit and delete actions to Admins -->
         <%= link_to "Edit Player", edit_player_path(@player.id) %>
         |
         <%= link_to "Delete Player", @player, :method => :delete, :data => { :confirm => 'Are you sure?' } %>

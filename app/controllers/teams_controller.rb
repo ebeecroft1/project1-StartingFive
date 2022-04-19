@@ -38,7 +38,7 @@ class TeamsController < ApplicationController
 
     private
     def team_params
-        params.require(:team).permit(:name, :player_ids => [])
+        params.require(:team).permit(:name, :player_ids => []) # Setting player_ids as an array allows multiple players to be added to a team
     end
 
 end

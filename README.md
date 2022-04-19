@@ -61,6 +61,8 @@ The end result is not very user friendly in that you have to select multiple pla
 
 ## Future Updates
 - Redesign the Teams Table to include 5 seperate inputs for Player IDs which would allow a user to select a player for each position on the court
+- Display players in positions on a basketball court
+- Player search function
 - Implement a model for NBA Teams, I lay the foundation in the Players table but did not complete
 - Assign tiers to the players with a dollar value per tier (e.g. Tier 1 = $15)
 - Implement a simple salary cap on the team creation (e.g. Create the best starting 5 you can with only $40)
