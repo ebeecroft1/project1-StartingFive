@@ -11,8 +11,9 @@ As a further challenge, the app was to be deployed using Heroku and I elected to
 [Starting 5](https://starting-5.herokuapp.com/)
 
 ### Tools Employed
+- Ruby 
 - Ruby on Rails
-- Postgresql
+- PostgreSQL
 - Bootstrap
 - bcrypt
 

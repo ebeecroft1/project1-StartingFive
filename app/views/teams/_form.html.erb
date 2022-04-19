@@ -12,6 +12,7 @@
                 <%= f.label :player_id, :class => 'form-label' %>s
                 <br>
                 <%= f.collection_select(:player_ids, Player.all, :id, :name, {:class => 'form-select'}, {:multiple => true}) %>
+                SHIFT, CTRL, or CMD to select multiple players
             </div>
             <br>
             
