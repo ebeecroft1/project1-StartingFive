@@ -1,5 +1,13 @@
 # Starting 5
 
+## [Starting 5](https://starting-5.herokuapp.com/)
+
+Email: luka@ga.co
+
+Password: nba
+
+---
+
 This is the second project I completed during my Software Engineering Immersive at General Assembly.
 
 The project deliverable was to create a CRUD web application combining what we had learned so far of front-end and back-end web development. The application was required to have at least 3 models with various associations and a user login.
@@ -8,10 +16,7 @@ For my project, I chose to make an application called Starting 5, where users ca
 
 As a further challenge, the app was to be deployed using Heroku and I elected to use Bootstrap to kick start my front-end.
 
-[Starting 5](https://starting-5.herokuapp.com/)
-
-### Tools Employed
-- Ruby 
+### Tech Stack
 - Ruby on Rails
 - PostgreSQL
 - Bootstrap
@@ -62,14 +67,11 @@ The end result is not very user friendly in that you have to select multiple pla
 
 ## Future Updates
 - Redesign the Teams Table to include 5 seperate inputs for Player IDs which would allow a user to select a player for each position on the court
-- Display players in positions on a basketball court
 - Player search function
 - Implement a model for NBA Teams, I lay the foundation in the Players table but did not complete
 - Assign tiers to the players with a dollar value per tier (e.g. Tier 1 = $15)
 - Implement a simple salary cap on the team creation (e.g. Create the best starting 5 you can with only $40)
 
-I would also like to add a simple salary cap function
-
 ## Bugs I still have
 - Create Team form - player selection is clunky
-- Bootstrap nav bar drop down menu when the window is made smaller doesn't work
+- Bootstrap hamburger on smaller screens not functional
