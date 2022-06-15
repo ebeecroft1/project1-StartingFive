@@ -1,5 +1,7 @@
 # Starting 5
 
+![Starting 5 screen shot](app/assets/images/starting5.png)
+
 ## [Starting 5](https://starting-5.herokuapp.com/)
 
 Email: luka@ga.co
